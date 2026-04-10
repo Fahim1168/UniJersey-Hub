@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 26% 7%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 26% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 142 72% 37%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 17% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 17% 12%;
+    --muted-foreground: 218 11% 55%;
+
+    --accent: 142 72% 37%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 16%;
+    --input: 220 13% 16%;
+    --ring: 142 72% 37%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 3%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 142 72% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 17% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 13% 16%;
+    --sidebar-ring: 142 72% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Marquee animation for announcement bar */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
